@@ -1,9 +1,68 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Testing out GitHub Pages</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guru Meditation</title>
+  <style>
+
+    :root{
+      --bg: #000000;
+      --fg: #ffffff;
+      --red: #e00000;   /* vivid Amiga‑ish red */
+      --shadow: #3a0000; /* inner darkening to mimic CRT edge */
+    }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--red);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+      letter-spacing: 0.02em;
+      display: grid;
+      place-items: center;
+      cursor: default;
+      text-align: center;
+    }
+
+    .frame {
+      border: 6px solid var(--red);
+      box-shadow: 0 0 0 2px var(--shadow) inset;
+      padding: 28px 36px;
+      max-width: 860px;
+      margin: 16px;
+      text-align: center;
+      line-height: 1.6;
+      animation: border-blink 1.1s steps(1,end) infinite;
+    }
+
+    .frame p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .frame hr {
+      border: 0;
+      height: 1px;
+      background: var(--red);
+      margin: 16px 0 14px 0;
+    }
+
+    @keyframes border-blink { 50% { border-color: transparent; } }
+
+    @media (max-width: 520px){
+      .frame{ padding: 18px 18px; border-width: 5px; }
+      .frame p{ font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Testing out GitHub Pages</h1>
+  <div class="frame">
+    <p>Software Failure. Press left mouse button to continue.</p>
+    <hr>
+    <p>Guru Meditation #00000004.0000AAC0</p>
+  </div>
 </body>
 </html>
